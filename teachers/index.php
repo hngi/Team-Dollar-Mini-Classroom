@@ -18,7 +18,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 	
 </head>
-<body>
+<body onload="eventFire(document.querySelector('#nav-profile-tab'), 'click');">
 	<section>
 		<div class="bg-img"></div>
 		<div class="bg-cover"></div>
@@ -84,7 +84,7 @@
 											<p class="col-auto text-white"><span><a href="../teachers/reset-password.html">Forgot Password?</a></span></p>
 										</div>
 										<div class="col-auto">
-											<p class="col-auto text-white"><span><a href="#nav-profile">Yet to register?</a></span></p>
+											<p class="col-auto text-white"><span onclick="switcher(document.querySelector('#nav-profile-tab'), 'click');"><a href="#nav-profile">Yet to register?</a></span></p>
 										</div>
 									</div>
 								</div>
@@ -100,6 +100,13 @@
 									</div>
 									<form class="p-4" action="api/register.php" method="post">
 										<div class="form-row justify-content-center align-items-center">
+											<p class="text-muted text-white">
+												<?php
+													if(isset($_GET["n"])){
+														echo $_GET["n"];
+													}
+												?>
+											</p>
 											<!--
 											<div class="form-group input-group col-md-5">
 												<div class="input-group-prepend">
@@ -127,7 +134,7 @@
 													</span>
 												</div>
 												<input id="firstName" name="name" type="text" class="form-control form-control-lg" 
-												placeholder="Fullame" required minlength="5" aria-label="firstName">
+												placeholder="Full Name" required minlength="5" aria-label="firstName">
 											</div>
 										</div>
 										<div class="form-group form-row justify-content-center align-items-center">
@@ -157,7 +164,7 @@
 										<div class="d-flex p-2">
 											<div class="col">
 												<p class="col-auto text-white">Registered Already, 
-													<span><a href="#nav-home">Sign in here!</a></span>
+													<span><a href="#nav-home" onclick="switcher(document.querySelector('#nav-home-tab'), 'click')">Sign in here!</a></span>
 												</p>
 											</div>
 										</div>
@@ -172,6 +179,24 @@
 
 
 	</section>
+	<script>
+		function eventFire(el, etype){
+			if(window.location.href.slice(-25) == "n=email%20already%20taken"){
+				switcher(el, etype);
+			}
+		}
+
+		function switcher(el, etype){
+			if (el.fireEvent) {
+				el.fireEvent('on' + etype);
+			} else {
+				var evObj = document.createEvent('Events');
+				evObj.initEvent(etype, true, false);
+				el.dispatchEvent(evObj);
+			}
+		
+		}
+	</script>
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

@@ -31,16 +31,28 @@ if(isset($_POST["name"])){
     $name = ($name ? mysqli_real_escape_string($conn, $name) : "");
     $password = ($password ? mysqli_real_escape_string($conn, $password) : "");
 
-    $sql = "INSERT INTO `teachers` SET
-      `name` = '" . $name . "',
-      `email` = '" . $email . "',
-      `password` = '" . $password . "'";
+    $sql1 = " SELECT * FROM students WHERE email='" . $email . "' ";
+    $sql2 = " SELECT * FROM teachers WHERE email='" . $email . "' ";
 
+    $result1 = $conn->query($sql1);
+    $result2 = $conn->query($sql2);
 
-    if ($conn->query($sql) === TRUE) {
-        header("location:../index.php?m=Successful registration. Please log in.");
-    } else {
-        $message = $conn->error ;
+    $result1 = $result1->fetch_assoc();
+    $result2 = $result2->fetch_assoc();
+
+    if($result1["email"] == $email || $result2["email"] == $email){
+      header("location:../index.php?n=email already taken");
+    }else{
+      $sql = "INSERT INTO `students` SET
+        `name` = '" . $name . "',
+        `email` = '" . $email . "',
+        `password` = '" . $password . "'";
+  
+      if ($conn->query($sql) === TRUE) {
+          header("location:../index.php?m=Successful registration. Please log in.");
+      } else {
+          $message = $conn->error ;
+      }
     }
 
     $conn->close();
