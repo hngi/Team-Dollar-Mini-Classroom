@@ -1,7 +1,6 @@
 <?php
-SESSION_START();
-$name = '';
-
-if (isset($_SESSION["id"])) {
-    $name = $_SESSION["name"];
+session_start();
+if (!isset($_SESSION['id'])) {
+header('Location:../index.html');
 }
+?>
