@@ -1,531 +1,213 @@
-*{
-    box-sizing: border-box;
+/* You can add global styles to this file, and also import other style files */
+* {
+    padding: 0;
     margin: 0;
-    padding: 0;
-}
-html,
-body{
-    font-family: 'Laksaman',sans-serif;
-    color: #222 !important;
-    width: 100%;
-    height: 100%;
-}
-/* Features */
-#features{
-    border-bottom: 2px solid rgba(0,0,0,0.7);
-}
-#features .figures{
-    color: rgb(13, 37, 185);
-}
-.features-icons-group{
-    background-color: #222;
-}
-.features-icons{
-    color: #fff;
-    margin: 0 0.5rem;
-}
-/* Top Navigation */
-#topMenu{
-    background-color: #fff;
-}
-.navbar-scrolled{
-    background-color: #fff !important;
-    margin-top: 0 !important;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-}
-.navbar-brand{
-    font-weight: 100;
+    box-sizing: border-box !important;
 }
 
-.navbar-brand a b{
-    font-weight: 900;
-    font-size: 1.5rem;
+html, body {
+  font-family: 'Roboto', 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  color: black;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-.btn-enroll{
-    background-color: rgb(13, 37, 185);
-    color: white !important;
-    border-radius: 10px;
-    padding: 0.5rem;
-}
-#masthead{
-    background: url('../images/img/bg-banner.jpg') no-repeat center top;
-    margin-top: 4rem;
+
+.bg-img {
+    background-image: url('../images/exams.png');
+    background-position: center;
     background-size: cover;
-    min-height: 550px;
-}
-#masthead .bg-color{
-    background-color: rgba(12, 11, 11, 0.82);
-    min-height: 550px;
-}
-.text-box{
-    font-size: 1.5rem;
-    text-align: center;
-    display: block;
-    padding: 1rem;
-    margin-top: 4rem;
-    text-align: left;
-}
-.typewriter{
-    margin-top: 1rem;
-    color: #fff;
-    font-size: 1rem;
-    text-align: left;
-    line-height: 27px;
-}
-.btn-more{
-    background-color: #FD6585 !important;
-    border: 2px solid #222;
-    padding: o.5rem 1rem;
-}
-.btn-primary{
-    background-color: rgb(13, 37, 185);
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    z-index: -2;
 }
 
-.btn-secondary{
-    background-color: #FD6585;
+.bg-cover {
+    background-color: rgb(0, 0, 0, 0.6);
+    background-size: cover;
+    opacity: 0.8;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
-/* Sections */
-
-.section{
-    padding: 4rem 0;
+.bg-color {
+    background-image: linear-gradient(#0D25B9, #FD6585); 
 }
 
-.section-main-header{
-    font-size: 1rem;
-    color: rgba(255,255,255,.4);
-    font-weight: 900;
+.bg-bloody {
+    background: linear-gradient(45deg, #f54ea2, #ff7676);
 }
 
-.section-header{
-    font-size: 1.5rem;
-    color: rgba(255,255,255,.9);
+.bg-violet {
+    background: linear-gradient(45deg, #4776e6, #8e54e9);
 }
 
-
-
-.section-subheader{
-    font-size: 0.9rem;
-    color: rgba(255,255,255,.7);
+.well {
+    font-family: 'Roboto', sans-serif !important;
+    color: #172b4d;
+    font-size: 2rem !important;
+    font-weight: bold;
 }
 
-.__black{
-    color: rgba(0,0,0,.9);
+h1 {
+    font-family: 'Open sans', sans-serif !important;
+    color: #172b4d;
+    font-size: 2.5rem;
+    font-weight: bold;
 }
 
- /* Features-d */
- #features-d{
-    background-color: #242424;
+.brand-text {
     color: white;
-}
-
-.f-feature{
-    padding: 1rem;
-    border-bottom: 4px dashed rgba(255,255,255,.4);
-    text-align: center;
-}
-
-.f-img{
-    width: 70px;
-    height: 70px;
-    margin-bottom: 1rem;
-    margin-right: 1rem;
-    color: rgba(255,255,255,0.9);
-}
-.f-heading{
     font-size: 1.2rem;
-}
-.f-details{
-    font-size: .9rem;
-    color: rgba(255,255,255,.7);
-}
-
-/* Testimonal */
-
-
-/* MOdal */
-#modal{
-    display: none;
-    box-shadow: 0 0 20px rgba(0,0,0,0.5) inset;
-    padding: 3rem 1rem;
-    background-color: #fff;
-    border-radius: 25px;
-}
-
-#modal input{
-    margin: 0.5rem 0;
-}
-
-
-
-
-/* Edittib Bootstrap */
-@media (min-width: 576px) {
-    .container {
-      max-width: 540px;
-    }
-    #topMenu{
-        margin-top: 2.6rem;
-        background-color: #fff;
-    }
-  }
-  
-  @media (min-width: 768px) {
-    #topMenu{
-        background-color: #fff;
-    }
-    .container {
-      max-width: 620px;
-    }
-    .text-box{
-        font-size: 2rem;
-        text-align: left;
-    }
-    .typewriter{
-        font-size: 1.2rem;
-        max-width: 350px;
-    }
-    .section{
-        padding: 6rem 0;
-    }
-    .f-feature{
-        border-right: 4px dashed rgba(255,255,255,.4);
-        border-bottom: none;    }
-    
-    #modal{
-        display: block;
-        position: absolute;
-        max-width: 500px;
-        top: 250px;
-        left: 450px;
-    }
-
-    .section-main-header{
-        font-size: 1.5rem;
-    }
-    
-    .section-header{
-        font-size: 2rem;
-    }
-    
-    .section-subheader{
-        font-size: 1rem;
-    }
-    .f-icons{
-        font-size: 2rem;
-    }
-    .f-heading{
-        font-size: 1.3rem;
-    }
-    .f-details{
-        font-size: 1rem;
-    }
-    
-    
-  }
-
-
- 
-  @media (min-width: 992px) {
-    .container {
-      max-width: 860px;
-    }
-    .typewriter{
-        font-size: 1.2rem;
-        max-width: 400px;
-    }
-    #modal{
-        display: block;
-        position: absolute;
-        max-width: 500px;
-        top: 250px;
-        left: 600px;
-    }
-  }
-  
-  @media (min-width: 1200px) {
-    .container {
-      max-width: 1040px;
-    }
-    #modal{
-        display: block;
-        position: absolute;
-        max-width: 500px;
-        top: 250px;
-        left: 800px;
-    }
-  }
-
-  /* Popular Class */
-  #class.section{
-      padding: 4rem 0;
-      margin-top: -6rem;
-  }
-
-
-  #class.section img {
-      width: 115px;
-      height: 115px;
-      margin: auto;
-  }
-
-  #class .card{
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
-    min-width: 12rem;
-    max-width: 18rem;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 15px;
-  }
-
-  .card .card-title{
-      font-size: 1.5rem;
-      font-weight: 700;
-  }
-  .card .card-text{
-      font-size: .9rem;
-      color: rgba(0,0,0,0.7);
-  }
-  .card .list-group{
-      font-size: .9rem;
-      color: #FD6585;
-  }
-  .card .card-body a{
-      color: #242424;
-  }
-
-#carouselTestim{
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0, rgba(0, 0,0, 0.8) 100%), url('../images/img/active.jpg');
-    color: white;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    filter: blur(0.4)
-}
-
-#carouselTestim h3{
-    font-size: 1.5rem;
-}
-#carouselTestim p{
-    font-size: .9rem;
-}
-
-#carouselTestim .carousel-item .container{
-    max-width: 567px;
-    margin: 0 auto;
-    text-align: center;
+    font-weight: bolder;
+    border-bottom: 2px solid lightgrey;
+    border-right: 2px solid lightblue;
+    font-family: 'Grenze', verdana, serif;
     
 }
 
-a.carousel-control-prev,
-a.carousel-control-next{
-    top: 80%;
+.text-black {
+    color: black !important;
 }
 
-a.carousel-control-prev{
-    left: 35%;
-}
-a.carousel-control-next{
-    right: 35%;
-}
-
-/***********************************
-Contact Us
-************************************/
-.contact form .form {
-    width: 100%;
-    height: auto;
-    padding: 15px 15px 12px;
-    font-size: 18px;
-    margin-bottom: 18px;
-    color: #7f7f7f;
-    letter-spacing: 0.5px;
-}
-#contact .form-control {
-    background: #fafafa;
-    border: 1px solid rgba(119, 81, 81, 0.34);
-    width: 100%;
-	margin-bottom: 15px;
-    border-radius: 0;
-
-}
-.textarea {
-    height: 228px;
-    max-width: 100%;
-    max-height: 229px;
-}
-.light {
-    font-weight: 100;
-}
-.white{
-    color: #fff !important;
+p {
+    font-family: 'Lato', sans-serif !important;
+    font-size: 1.3rem;
+    margin-bottom:0;
 }
 
-.validation {
-    color: red;
-    display:none;
-    margin: 0 0 20px;
-    font-weight:400;
-    font-size:13px;
-}
-
-#sendmessage {
-    color: green;
-    border:1px solid green;
-    display:none;
-    text-align:center;
-    padding:15px;
-    font-weight:600;
-    margin-bottom:15px;
-}
-
-#errormessage {
-    color: red;
-    display:none;
-    border:1px solid red;
-    text-align:center;
-    padding:15px;
-    font-weight:600;
-    margin-bottom:15px;
-}
-
-#sendmessage.show, #errormessage.show, .show {
-	display:block;
-}
-
-.btn-submit{
-    background-color: #FD6585;
-}
-
-form.mc-trial{
-    justify-content: center;
-}
-
-/***********************************
-Footer
-************************************/
-.footer {
-    padding: 60px 0 20px;
-    background: #111;
-    color: #ccc;
-}
-.footer a {
+a {
+    text-decoration: none !important;
     color: #fff;
+    line-height: 2.5;
 }
 
-.footer h3{
-	font-weight: 300;
-	letter-spacing: 0.05em;
-	margin: 0 0 40px;
-	font-size: 24px;
-}
-.footer .form-control {
-    border-radius: 30px;
-    border: none;
-    background: rgba(255,255,255,.1);
-    padding-left: 30px;
-    color: #e5e6e7;
-    margin-bottom: 0;
-    height: 48px;
-}
-.footer .social-links li a {
-    color: #fff;
-    font-size: 32px;
-    line-height: 50px;
-    border-radius: 50%;
-    text-align: center;
-    -webkit-transition: all .3s ease-out;
-    transition: all .3s ease-out;
-}
-.footer .social-links li {
-    display: inline-block;
-    margin: 0 25px 25px;
-    -webkit-transition: all .3s ease-out;
-    transition: all .3s ease-out;
-}
-.footer .mc-trial {
-    margin: 20px 0;
-}
-.footer .social-links {
-    list-style: none;
-    padding: 0;
-    margin: 30px 0 40px;
-    padding: 40px 0 0;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
-}
-.btn-submit:hover, .btn-submit:focus{
-    background-color: #FD6585;
-    color: #fff;
-}
-.btn-submit{
-	padding: 14px 12px;
-	border-radius: 50px;
-	text-transform: uppercase;
-    background-color: #FD6585;
-    color: #fff;
-}
-.btn-submit i{
-	padding-left: 8px;
+a:hover {
+    color: inherit;
 }
 
-.btn-sec {
-    margin-top: 20px;
+h3 {
+    line-height: 2.0;
 }
-.ser-btn {
-    padding: 10px 18px;
-    border: 0px;
-    background-color: #222935;
-    color: #fff;
-    border-radius: 3px;
-    display: inline-block;
-    margin-bottom: 20px;
+
+input {
+    height: 1.8rem;
+    padding: 0.7rem;
+    font-size: 16px;
 }
-.mem-info{
-    padding: 45px 10px 0px;
-    background-color: #eee;
+
+input::-webkit-input-placeholder {
+    direction: ltr;
+    font-family: 'Roboto', sans-serif;
 }
-.mem-info h4 {
-    font-size: 18px;
-    padding: 10px 0px;
+
+.logo {
+    width: 7rem;
 }
-.mem-info h3{
-    font-size: 24px;
-    padding: 15px 0px;
+
+:placeholder-shown {
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px !important;
 }
-.mem-info h5
-{
-    margin-top: 10px;
-    margin-bottom: 10px;
+
+.box-shadow {
+    box-shadow:  0 19px 38px rgba(0,0,0,0.50), 0 30px 40px rgba(224, 127, 187, 0.42);
 }
-.mem-info p {
-    margin: 0 0 10px;
+
+input.form-control:focus {
+    border: none !important;
 }
-.agent-social li {
-    display: inline-block;
-    padding: 0px 10px 0px 0px;
-    margin-bottom: 10px;
-}
+
 .btn {
-    padding: 10px 20px;
-}
-.light-form-button{
-    background: #FD6585;
-    border: 1px solid rgba(119, 81, 81, 0.34);
-    width: 24%;
-    padding: 10px 10px;
-    margin-bottom: 15px;
+    background-color: #FD6585 !important;
+    border: none;
     color: #fff;
-    border: 1px solid rgba(119, 81, 81, 0.34);
-    width: 24%;
-    margin-bottom: 15px;
-     -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+    margin-top:20px;
 }
-.btn-green, .btn-green:hover{
-    background-color: #FD6585;
-    color: #fff;
+
+.btn-shadow{
+    padding: 0.6rem;
+    border-radius: 13px;
+    width: 8rem;
+    box-shadow:  0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }
-.footer .form-control:focus{
-    box-shadow: none;
+
+.fa4 {
+    color: #172b4d;
+    font-size: 14px !important;
+}
+
+.portlet {
+    position: absolute;
+    top: 60px;
+    left: 210px;
+}
+
+.card {
+    width: 33rem;
+    margin-top: 70px;
+}
+
+#form {
+    width: 40%;
+    margin-top:70px;
+}
+
+#form-info {
+    display:flex;
+    justify-content:space-around;
+}
+
+@media(max-width: 767px) {
+    .card {
+        width: auto;
+    }
+
+    .brand-text {
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    #form {
+        width: auto;
+        margin-top:20px;
+    }
+
+    #form-info {
+        flex-direction: column;
+    }
+
+    .btn{
+        font-size: 1.2rem;
+    }
+}
+
+@media(min-width: 768px) and (max-width: 991px) {
+    .card {
+        width: 700px;
+    } 
+
+    #form {
+        width:70%;
+    }
+
+    p {
+        font-size: 1.6rem;
+    }
 }

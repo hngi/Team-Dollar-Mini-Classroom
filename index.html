@@ -1,364 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+	    <title>Students Login</title>
+	    <!-- Required meta tags -->
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	    <!-- Bootstrap CSS -->
+	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	    <!-- CSS -->
+	    <link rel="stylesheet" href="assets/css/styles.css">
+	    <!-- FontAwesome 4 -->
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	    <!-- Google Font -->
+	    <link href="https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Acme|Amatic+SC|Anton|Archivo+Narrow|Arimo|Arvo|Asap|Assistant|Barlow|Bitter|Bree+Serif|Cabin|Cairo|Catamaran|Cinzel|Coda|Coda+Caption:800|Comfortaa|Crete+Round|Crimson+Text|Dancing+Script|Domine|Dosis|EB+Garamond|Encode+Sans+Condensed|Exo|Exo+2|Fahkwang|Fira+Sans|Fira+Sans+Condensed|Fjalla+One|Francois+One|Grenze|Gloria+Hallelujah|Heebo|Hind|Hind+Madurai|Hind+Siliguri|Inconsolata|Indie+Flower|Jacques+Francois|Josefin+Sans|Kanit|Karla|Kdam+Thmor|Lato|Libre+Baskerville|Libre+Franklin|Lobster|Lora|Major+Mono+Display|Maven+Pro|Merriweather|Merriweather+Sans|Montserrat|Mukta|Muli|Nanum+Gothic|Noto+Sans|Noto+Sans+JP|Noto+Sans+KR|Noto+Sans+TC|Noto+Serif|Noto+Serif+SC|Nunito|Nunito+Sans|Open+Sans|Open+Sans+Condensed:300|Oswald|Oxygen|PT+Sans|PT+Sans+Caption|PT+Sans+Narrow|PT+Serif|Pacifico|Play|Playfair+Display|Poppins|Questrial|Quicksand|Rajdhani:Bold|Raleway|Righteous|Roboto|Roboto+Condensed|Roboto+Mono|Roboto+Slab|Rubik|Saira+Extra+Condensed|Sarabun|Shadows+Into+Light|Signika|Slabo+27px|Source+Code+Pro|Source+Sans+Pro|Source+Serif+Pro|Staatliches|Teko|Titillium+Web|Ubuntu|Ubuntu+Condensed|Varela+Round|Vollkorn|Work+Sans|Yanone+Kaffeesatz|ZCOOL+KuaiLe"rel="stylesheet">
+	</head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Team Dollar | Home</title>
-	<!-- Font Awesome -->
-	<link rel="stylesheet" href="./assets/vendor/fontawesome-free/css/all.min.css">
-	<!-- Bootstrap -->
-	<link rel="stylesheet" href="./assets/vendor/bootstrap/css/bootstrap.css">
-	<!-- Custom Style -->
-	<link rel="stylesheet" href="./assets/css/styles.css">
-</head>
+	<body>
 
-<body>
-
-	<!-- Feature Section -->
-	<div id="features">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="d-none d-md-inline col-md-9 py-1">
-					<marquee direction="rtl">
-						Total of <span class="figures">1,239,864 </span>students are learning here, you can <a
-							href="students/index.php">join</a>
-						them.
-
-						Over <span class="figures">100,000</span> Class available on this new yet fast grow Platform
-					</marquee>
-				</div>
-				<div class="d-none d-md-inline col-md-3 text-right features-icons-group py-1">
-					<a href="#"><i class="features-icons fab fa-twitter"></i></a>
-					<a href="#"><i class="features-icons fab fa-facebook"></i></a>
-					<a href="#"> <i class="features-icons fab fa-youtube"></i></a>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Navigation -->
-	<nav id="topMenu" class="navbar navbar-expand-lg py-2 navbar-light fixed-top">
-		<div class="container">
-			<div class="navbar-brand js-scroll-trigger">
-				<a href="#"><b>Dollar</b>Class</a>
-			</div>
-			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-				data-target="#topNav" aria-controls="topNav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="topNav">
-				<ul class="navbar-nav ml-auto my-2 my-lg-0">
-					<li class="nav-item">
-						<a class="nav-link js-scroll-trigger" href="#features-d">Services</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link js-scroll-trigger" href="#class">Popular Class</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link js-scroll-trigger" href="#carouselTestim">Testimonals</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link js-scroll-trigger" href="./teachers/index.php">Login (Teachers)</a>
-					</li>
-					<li class="ml-3 nav-item">
-						<a class="nav-link js-scroll-trigger btn-enroll" href="./students/index.php">Enroll Now</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-
-	<!-- Modal  -->
-	<div id="modal">
-		<div class="container">
-			<h3 class="mb-4"> Sign up </h3>
-			<form action="" method="post">
-				<label for="inputEmail" class="sr-only">Email address</label>
-				<input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-				<label for="inputPassword" class="sr-only">Password</label>
-				<input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-				<button class="btn btn-sm btn-primary btn-block" type="submit">Sign up</button>
-			</form>
-			<p class="small" style="margin-top: 10px;">Students only</p>
-		</div>
-	</div>
-
-	<!-- Big title section -->
-	<header id="masthead">
-		<div class="bg-color">
-			<div class="container h-100">
-				<div class="row h-100 align-items-center justify-content-left text-left">
-					<div class="col-lg-10 align-self-end">
-						<h1 class="text-box text-white">
-							Quality Teachings, Indept Knowlegde
-						</h1>
-					</div>
-					<div class="col-lg-8 align-self-baseline">
-						<p class="text-white-75 font-weight-light mb-5 typewriter">
-							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis veniam sed, recusandae animi
-							enim ipsa rem, blanditiis tempore eaque ea beatae quos assumenda tempora a? Voluptate sit
-							dolor nesciunt repudiandae.
-						</p>
-						<a class="btn btn-primary btn-xl bg-dark js-scroll-trigger btn-more" href="#about">Find Out
-							More</a>
+		<section>
+			<div class="bg-img"></div>
+			<div class="bg-cover"></div>
+			<div class="container-fluid">
+				<div class="row">
+					<div>
+						<img src="assets/images/logo.png" alt="Logo" style="width: 20%">
+						<span class="brand-text p-1">Dollar Classroom</span>
 					</div>
 				</div>
-			</div>
-		</div>
-	</header>
-
-	<!-- Features -->
-	<section id="features-d" class="section">
-		<div class="container">
-			<h5 class="section-main-header">
-				Our Service
-			</h5>
-			<h3 class="section-header">
-				What Do We Offer?
-			</h3>
-			<p class="section-subheader mb-5">
-				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum temporibus, atque quasi reiciendis
-				labore quidem velit minus ad minima molestiae
-			</p>
-		</div>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4 f-feature">
-					<div class="container ">
-						<img class="f-img" src="./assets/images/img/svg/016-lecture.svg" alt="">
-						<h3 class="f-heading">Content Filled Class</h3>
-						<p class="f-details">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam dolorem odit modi, quas
-							incidunt repellat.
-						</p>
+				<div class="card p-5 mx-auto">
+					<div class="well text-center">
+						<h1>Welcome!</h1>
+						<p class="mt-4 mt-md-5">Sign in</p>
 					</div>
-				</div>
-				<div class="col-md-4 f-feature">
-					<div class="container ">
-						<img class="f-img" src="./assets/images/img/svg/008-elearning.svg" alt="">
-						<h3 class="f-heading">Learn AnyWhere, Anytime</h3>
-						<p class="f-details">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam dolorem odit modi, quas
-							incidunt repellat.
-						</p>
-					</div>
-				</div>
-				<div class="col-md-4 f-feature">
-					<div class="container ">
-						<img class="f-img" src="./assets/images/img/svg/006-digital.svg" alt="">
-						<h3 class="f-heading">Get Certified</h3>
-						<p class="f-details">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam dolorem odit modi, quas
-							incidunt repellat.
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- Popular Class -->
-	<div id="class" class="section">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4">
-					<div class="card">
-						
-						<div class="card-body">
-							<h5 class="card-title">Philosophy</h5>
-							<p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque veniam
-								consequuntur facilis!</p>
-						</div>
-						<ul class="list-group list-group-flush">
-							<li class="list-group-item">102 Students in class</li>
-							<li class="list-group-item">12 Tutors</li>
-						</ul>
-						<div class="card-body">
-							<a href="./students/index.php" class="card-link">Signup</a>
-							<a href="./students/index.php" class="card-link">Related</a>
+					<div class="my-2 p-0">
+						<div class="card-deck">
+							<div class="card text-white bg-bloody" style="border: none;margin-top: 20px;">
+								<div class="text-center">
+									<i class="fa fa-graduation-cap"></i>
+									<a href="students/">
+										<h3 class="text-white">Students</h3>
+									</a>
+								</div>
+							</div>
+							<div class="card text-white bg-violet" style="border: none;margin-top: 20px;">
+								<div class="text-center">
+									<i class="fa fa-id-badge"></i>
+									<a href="teachers/">
+										<h3 class="text-white">Teachers</h3>
+									</a>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4">
-					<div class="card">
-						
-						<div class="card-body">
-							<h5 class="card-title">Manchine learning</h5>
-							<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque cumque
-								laudantium ullam!</p>
-						</div>
-						<ul class="list-group list-group-flush">
-							<li class="list-group-item">45 Students in class</li>
-							<li class="list-group-item">5 Tutors</li>
-							<li class="list-group-item">2 Projects </li>
-						</ul>
-						<div class="card-body">
-							<a href="#" class="card-link">Signup</a>
-							<a href="#" class="card-link">Related</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="card">
-						<div class="card-body">
-							<h5 class="card-title">Busniess Strategy</h5>
-							<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque cumque
-								laudantium ullam!</p>
-						</div>
-						<ul class="list-group list-group-flush">
-							<li class="list-group-item">45 Students in class</li>
-							<li class="list-group-item">5 Tutors</li>
-						</ul>
-						<div class="card-body">
-							<a href="./students/index.php" class="card-link">Signup</a>
-							<a href="./students/index.php" class="card-link">Related</a>
-						</div>
-					</div>
-				</div>
-
 			</div>
-		</div>
-	</div>
+		</section>
 
-	<!-- Testimonals -->
-	<div id="carouselTestim" class="carousel slide section" data-ride="carousel">
-		<div class="carousel-inner">
-			<div class="carousel-item active" data-interval="10000">
-				<div class="container text-center">
-					<h3>Mark Bill</h3>
-					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus excepturi fugiat quod alias
-						quos
-						odit nostrum, recusandae sed accusantium, debitis possimus modi est quam?</p>
-					<p>Attended <b>Philosophy</b> class with <b>23 others</b></p>
-				</div>
-			</div>
-			<div class="carousel-item" data-interval="2000">
-				<div class="container text-center">
-					<h3>Mark Bill</h3>
-					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus excepturi fugiat quod alias
-						quos
-						odit nostrum, recusandae sed accusantium, debitis possimus modi est quam?</p>
-					<p>Attended <b>Philosophy</b> class with <b>23 others</b></p>
-				</div>
-			</div>
-			<div class="carousel-item">
-				<div class="container text-center">
-					<h3>Mark Bill</h3>
-					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus excepturi fugiat quod alias
-						quos
-						odit nostrum, recusandae sed accusantium, debitis possimus modi est quam?</p>
-					<p>Attended <b>Philosophy</b> class with <b>23 others</b></p>
-				</div>
-			</div>
-		</div>
-		<a class="carousel-control-prev" href="#carouselTestim" role="button" data-slide="prev">
-			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-			<span class="sr-only">Previous</span>
-		</a>
-		<a class="carousel-control-next" href="#carouselTestim" role="button" data-slide="next">
-			<span class="carousel-control-next-icon" aria-hidden="true"></span>
-			<span class="sr-only">Next</span>
-		</a>
-	</div>
-
-
-	<!--Contact-->
-	<section id="contact" class="section">
-		<div class="container">
-			<div class="row flex-column text-center">
-				<div class="text-center">
-					<h2 class="section-header __black">Contact Us</h2>
-					<p class="section-subheader __black">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-						Exercitationem nesciunt vitae,<br> maiores, magni dolorum aliquam.</p>
-				</div>
-				<div id="sendmessage">Your message has been sent. Thank you!</div>
-				<div id="errormessage"></div>
-				<form action="" method="post" role="form" class="contactForm">
-					<div class="mx-auto col-md-6 col-sm-6 col-xs-12 left">
-						<div class="form-group">
-							<input type="text" name="name" class="form-control form" id="name" placeholder="Your Name"
-								data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-							<div class="validation"></div>
-						</div>
-						<div class="form-group">
-							<input type="email" class="form-control" name="email" id="email" placeholder="Your Email"
-								data-rule="email" data-msg="Please enter a valid email" />
-							<div class="validation"></div>
-						</div>
-						<div class="form-group">
-							<input type="text" class="form-control" name="subject" id="subject" placeholder="Subject"
-								data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-							<div class="validation"></div>
-						</div>
-					</div>
-
-					<div class="mx-auto col-md-6 col-sm-6 col-xs-12 right">
-						<div class="form-group">
-							<textarea class="form-control" name="message" rows="5" data-rule="required"
-								data-msg="Please write something for us" placeholder="Message"></textarea>
-							<div class="validation"></div>
-						</div>
-					</div>
-
-					<div class="col-xs-12">
-						<!-- Button -->
-						<button type="submit" id="submit" name="submit"
-							class="form contact-form-button light-form-button oswald light">SEND EMAIL</button>
-					</div>
-				</form>
-
-			</div>
-		</div>
-	</section>
-	<!--/ Contact-->
-
-	<!--Footer-->
-	<footer id="footer" class="footer">
-		<div class="container text-center">
-
-			<h3>Subscribe to get latest updates on classes</h3>
-
-			<form class="mc-trial row">
-				<div class="form-group col-md-3 col-md-offset-2 col-sm-4">
-					<div class=" controls">
-						<input name="name" placeholder="Enter Your Name" class="form-control" type="text">
-					</div>
-				</div>
-				<!-- End email input -->
-				<div class="form-group col-md-3 col-sm-4">
-					<div class=" controls">
-						<input name="EMAIL" placeholder="Enter Your email" class="form-control" type="email">
-					</div>
-				</div>
-				<!-- End email input -->
-				<div class="col-md-2 col-sm-4">
-					<p>
-						<button name="submit" type="submit" class="btn btn-block btn-submit">
-							Submit <i class="fa fa-arrow-right"></i></button>
-					</p>
-				</div>
-			</form>
-			<!-- End newsletter-form -->
-			<ul class="social-links">
-				<li><a href="#link"><i class="fab fa-twitter fa-fw"></i></a></li>
-				<li><a href="#link"><i class="fab fa-facebook fa-fw"></i></a></li>
-				<li><a href="#link"><i class="fab fa-google-plus fa-fw"></i></a></li>
-				<li><a href="#link"><i class="fab fa-dribbble fa-fw"></i></a></li>
-				<li><a href="#link"><i class="fab fa-linkedin fa-fw"></i></a></li>
-			</ul>
-			©2019 Dollar Class. All rights reserved
-		</div>
-	</footer>
-	<!--/ Footer-->
-
-	<script src="./assets/vendor/jquery/jquery.min.js"></script>
-	<script src="./assets/vendor/jquery-easing/jquery.easing.min.js"></script>
-	<script src="./assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
-	<script src="./assets/script/custom.js"></script>
-</body>
-
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	</body>
+	
 </html>

@@ -9,7 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
     <!-- FontAwesome 4 -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Google Font -->
@@ -18,13 +18,13 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 	
 </head>
-<body onload="eventFire(document.querySelector('#nav-profile-tab'), 'click');">
+<body>
 	<section>
 		<div class="bg-img"></div>
 		<div class="bg-cover"></div>
 		<div ng-app="myApp" ng-controller="myCtrl">
 			<p ng-bind="response"></p>
-			<div class="container mt-5" style="width: 30rem;">
+			<div class="container" id="form">
 				<nav>
 					<div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
 						<a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Sign In</a>
@@ -74,23 +74,24 @@
 											</div>
 										</div>
 										
-										<button class="btn btn-shadow btn-lg btn-primary" type="submit" ng-click="postData()">
+										<button class="btn btn-shadow btn-lg text-white mt-3" type="submit" ng-click="postData()">
 											<span class="">Sign In</span>
 										</button>
 									</form>
 									
-									<div class="d-flex">
-										<div class="col-auto">
-											<p class="col-auto text-white"><span><a href="../teachers/reset-password.html">Forgot Password?</a></span></p>
-										</div>
-										<div class="col-auto">
-											<p class="col-auto text-white"><span><a href="#nav-profile" onclick="switcher(document.querySelector('#nav-profile-tab'), 'click')">Yet to register?</a></span></p>
-										</div>
+									<div id="form-info">
+										<p>
+											<a href="../students/reset-password.html">Forgot Password?</a>
+										</p>
+										<p>
+											<a href="#nav-profile">Yet to register?</a>
+										</p>
 									</div>
 								</div>
 							</div> 
 						</div>
 					</div>
+					
 					<div class="tab-pane box-shadow fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
 						<div class="bg-color">
 							<div class="text-center">
@@ -100,13 +101,6 @@
 									</div>
 									<form class="p-4" action="api/register.php" method="post">
 										<div class="form-row justify-content-center align-items-center">
-											<p class="text-muted text-white">
-												<?php
-													if(isset($_GET["n"])){
-														echo $_GET["n"];
-													}
-												?>
-											</p>
 											<!--
 											<div class="form-group input-group col-md-5">
 												<div class="input-group-prepend">
@@ -134,7 +128,7 @@
 													</span>
 												</div>
 												<input id="firstName" name="name" type="text" class="form-control form-control-lg" 
-												placeholder="Full Name" required minlength="5" aria-label="firstName">
+												placeholder="Fullame" required minlength="5" aria-label="firstName">
 											</div>
 										</div>
 										<div class="form-group form-row justify-content-center align-items-center">
@@ -164,7 +158,7 @@
 										<div class="d-flex p-2">
 											<div class="col">
 												<p class="col-auto text-white">Registered Already, 
-													<span><a href="#nav-home" onclick="switcher(document.querySelector('#nav-home-tab'), 'click')">Sign in here!</a></span>
+													<span><a href="#nav-home">Sign in here!</a></span>
 												</p>
 											</div>
 										</div>
@@ -210,24 +204,6 @@
 			});
 		</script>
 	</section>
-	<script>
-		function eventFire(el, etype){
-			if(window.location.href.slice(-25) == "n=email%20already%20taken"){
-				switcher(el, etype);
-			}
-		}
-		
-		function switcher(el, etype){
-			if (el.fireEvent) {
-				el.fireEvent('on' + etype);
-			} else {
-				var evObj = document.createEvent('Events');
-				evObj.initEvent(etype, true, false);
-				el.dispatchEvent(evObj);
-			}
-		
-		}
-	</script>
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
